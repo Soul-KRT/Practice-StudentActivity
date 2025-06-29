@@ -38,7 +38,9 @@ namespace StudentActivity
         {
             Students.Clear();
 
+            if (!File.Exists(filePath)) return;
             var lines = File.ReadAllLines(filePath);
+
             foreach (string line in lines)
             {
                 Student student = Student.FromString(line, delimeter);
