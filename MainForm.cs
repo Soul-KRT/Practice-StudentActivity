@@ -20,12 +20,6 @@ namespace StudentActivity
 
         private void Draw()
         {
-            if (!File.Exists(filePath))
-            {
-                MessageBox.Show("Файл не найден.");
-                return;
-            }
-
             Записи.Items.Clear();
 
             foreach (Student student in Students.Values)
